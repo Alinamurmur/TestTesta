@@ -3,7 +3,7 @@
     package="com.example.alina.testtesta">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -28,8 +28,7 @@
             android:label="@string/title_activity_tabbed"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Test" />
-        <activity android:name=".ActivityTab" />
-        <activity android:name=".Contacts"></activity>
+        <activity android:name=".Contacts" />
     </application>
 
 </manifest>

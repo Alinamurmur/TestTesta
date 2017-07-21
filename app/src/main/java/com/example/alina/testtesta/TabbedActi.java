@@ -34,8 +34,6 @@ public class TabbedActi extends AppCompatActivity {
 
     Toolbar toolbar;
 
-    String name;
-    List<DataClass> list;
     static Context context;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -91,10 +89,10 @@ context = getApplicationContext();
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
-        TextView title,text;
-        ImageView imageView;
-        static int fr =1;
-        String tex = "R.string.text";
+       // TextView title,text;
+        //mageView imageView;
+        //static int fr =1;
+       // String tex = "R.string.text";
         String titl,url,textt;
 
 
@@ -130,9 +128,9 @@ context = getApplicationContext();
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_tabbed, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            TextView texView = (TextView) rootView.findViewById(R.id.sometext);
-            ImageView imageView = (ImageView) rootView.findViewById(R.id.someimg);
+            TextView textView = rootView.findViewById(R.id.section_label);
+            TextView texView =  rootView.findViewById(R.id.sometext);
+            ImageView imageView =  rootView.findViewById(R.id.someimg);
             textView.setText(titl);
             texView.setText(textt);
             Picasso.with(getActivity()).load(url).into(imageView);

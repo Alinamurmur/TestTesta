@@ -29,5 +29,6 @@ dependencies {
     compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
     compile 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
     compile 'com.romandanylyk:pageindicatorview:0.0.7'
+    compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
 }

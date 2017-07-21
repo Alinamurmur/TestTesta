@@ -4,7 +4,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Test extends AppCompatActivity {
+import com.example.alina.testtesta.TEst.FirstFragment;
+
+public class Test extends AppCompatActivity implements Fragment_akaTrud.ListListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,8 +16,17 @@ public class Test extends AppCompatActivity {
 
         Fragment_akaTrud fr = new Fragment_akaTrud();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frame, fr);
-        ft.addToBackStack(null);
+        ft.add(R.id.frame, fr);
         ft.commit();
+    }
+
+    @Override
+    public void itemClicked(int i) {
+        FirstFragment fragment = new FirstFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragment.getSelected(i);
+        fragmentTransaction.replace(R.id.frame,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

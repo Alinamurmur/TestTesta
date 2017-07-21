@@ -13,12 +13,14 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.alina.testtesta.TEst.FirstFragment;
 import com.squareup.picasso.Picasso;
 
 import java.io.BufferedInputStream;
@@ -33,23 +35,12 @@ import java.net.URLConnection;
 public class MainActivity extends AppCompatActivity {
 
     String url = "https://pp.userapi.com/c837522/v837522759/4976d/d29djluWTiE.jpg";
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView imf = (ImageView)findViewById(R.id.Img);
-      //  new DownloadImageTask(imf).execute("https://cs7064.userapi.com/c540100/v540100555/2f850/c-IcE9427A4.jpg");
-//
-     //  imf.setImageURI(Uri.parse(url));
-
-     //   Uri imgUri=Uri.parse("file:///data/data/MYFOLDER/myimage.png");
-
-       // imf.setImageURI(imgUri);
-
-        //Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL("https://pp.userapi.com/c837522/v837522759/4976d/d29djluWTiE.jpg").getContent());
-      //  imf.setImageBitmap(bitmap);
-
 
         //Работаем с Picasso
         Picasso.with(this)
@@ -91,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick2(View view) {
-        Intent intent = new Intent(this, ActivityTab.class);
+        Intent intent = new Intent(this, TabbedActi.class);
         startActivity(intent);
 
     }
